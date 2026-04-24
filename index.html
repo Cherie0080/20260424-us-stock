@@ -20,7 +20,7 @@
     h1{font-size:2rem;line-height:1.2;margin:14px 0 10px}.lead{color:var(--sub);margin:0}.section,.dark-board{margin-top:18px}.section h2,.dark-board h2{font-size:1.42rem;margin:0 0 12px}
     .grid{display:grid;gap:14px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px}.tag{display:inline-block;margin-bottom:10px;background:#f2e2cf;color:#8a6135;padding:5px 11px;border-radius:999px;font-size:.8rem;font-weight:800}
     .big{font-size:1.12rem;font-weight:800;line-height:1.45}.muted{color:var(--sub)}
-    .dark-board{background:linear-gradient(180deg,#171b22 0%,#11151c 100%);border-color:#2a313d;color:#f5f7fb}.dark-board .muted{color:#aab3c2}.table{display:grid;gap:12px}.row{display:grid;grid-template-columns:1.5fr .8fr .8fr .8fr .9fr;gap:10px;align-items:center;background:#111722;border:1px solid #252d39;border-radius:18px;padding:14px}.row.head{background:#161d28;border-color:#384255;font-weight:800;color:#cdd6e3}.name{font-weight:800}.ticker{color:#8dd3a8;font-weight:700;margin-top:4px}.down{color:var(--green)}.up{color:var(--red)}.rank{color:#f3c86b;font-weight:800}
+    .dark-board{background:linear-gradient(180deg,#171b22 0%,#11151c 100%);border-color:#2a313d;color:#f5f7fb}.dark-board .muted{color:#aab3c2}.table{display:grid;gap:12px}.row{display:grid;grid-template-columns:1.4fr .75fr .75fr .75fr .8fr 1fr;gap:10px;align-items:center;background:#111722;border:1px solid #252d39;border-radius:18px;padding:14px}.row.head{background:#161d28;border-color:#384255;font-weight:800;color:#cdd6e3}.name{font-weight:800}.ticker{color:#8dd3a8;font-weight:700;margin-top:4px}.down{color:var(--green)}.up{color:var(--red)}.rank{color:#f3c86b;font-weight:800}.space-box{background:linear-gradient(180deg,#f1f1f1 0%,#e6e6e6 100%);border:1px solid #d8d8d8;border-radius:22px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.06)}.space-chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid #d9d9d9;font-size:.82rem;font-weight:800;color:#6b6b6b}.space-high{color:#2f7d4f;font-weight:800}.space-mid{color:#9a6b2f;font-weight:800}.space-low{color:#8a5a44;font-weight:800}
     .social-card{background:linear-gradient(180deg,#171b22 0%,#11151c 100%);border:1px solid #2a313d;border-radius:28px;padding:20px;color:#f5f7fb;box-shadow:0 18px 40px rgba(0,0,0,.28)}
     .social-title{font-size:1.65rem;line-height:1.25;font-weight:800;margin:12px 0 6px}.mini{font-size:.92rem;color:#aab3c2}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{padding:6px 10px;border-radius:999px;background:#202633;border:1px solid #323b4d;color:#eac27c;font-size:.82rem;font-weight:700}.footer{margin-top:20px;color:#8f857d;font-size:.9rem;text-align:center}
     @media (max-width:800px){.grid-2,.grid-3,.row{grid-template-columns:1fr}.row.head{display:none}h1{font-size:1.7rem}.wrap{padding:12px 10px 64px}}
@@ -55,17 +55,22 @@
 
     <section class="section">
       <h2>📘 完整版名單整理</h2>
+      <div class="space-box" style="margin-bottom:14px;">
+        <div class="space-chip">灰底重點區</div>
+        <p class="big" style="margin-top:10px;">新增「上行空間評估」欄位，採簡易版分級：</p>
+        <p class="muted">高＝若主線續強、位階修復後仍有延伸空間，中＝偏整理後再觀察，低＝雖進價值區但結構或彈性相對有限。</p>
+      </div>
       <div class="table">
-        <div class="row head"><div>股票名稱</div><div>代號</div><div>收盤價</div><div>漲跌幅</div><div>位階股數</div></div>
-        <div class="row"><div><div class="name">SATELLOGIC INC</div><div class="muted">衛星 / 高波動題材</div></div><div class="ticker">SATL</div><div>6.81</div><div class="down">-5.94%</div><div class="rank">79.11</div></div>
-        <div class="row"><div><div class="name">LUMENTUM HOLDINGS INC</div><div class="muted">光通訊 / AI 基建</div></div><div class="ticker">LITE</div><div>846.89</div><div class="down">-3.06%</div><div class="rank">0.45</div></div>
-        <div class="row"><div><div class="name">科林研發</div><div class="muted">半導體設備</div></div><div class="ticker">LRCX</div><div>258.56</div><div class="down">-2.63%</div><div class="rank">1.36</div></div>
-        <div class="row"><div><div class="name">應用材料</div><div class="muted">半導體設備</div></div><div class="ticker">AMAT</div><div>403.91</div><div class="up">+0.11%</div><div class="rank">0.62</div></div>
-        <div class="row"><div><div class="name">美光科技</div><div class="muted">記憶體 / AI 受惠鏈</div></div><div class="ticker">MU</div><div>481.72</div><div class="down">-1.18%</div><div class="rank">0.44</div></div>
-        <div class="row"><div><div class="name">GE VERNOVA INC</div><div class="muted">電力 / 基建</div></div><div class="ticker">GEV</div><div>1,149.53</div><div class="up">+1.95%</div><div class="rank">0.18</div></div>
-        <div class="row"><div><div class="name">輝達</div><div class="muted">AI 核心股</div></div><div class="ticker">NVDA</div><div>199.64</div><div class="down">-1.41%</div><div class="rank">1.03</div></div>
-        <div class="row"><div><div class="name">科磊</div><div class="muted">半導體設備</div></div><div class="ticker">KLAC</div><div>1,815.43</div><div class="up">+0.19%</div><div class="rank">0.11</div></div>
-        <div class="row"><div><div class="name">博通</div><div class="muted">AI 核心股 / 升溫</div></div><div class="ticker">AVGO</div><div>419.94</div><div class="down">-0.64%</div><div class="rank">0.46</div></div>
+        <div class="row head"><div>股票名稱</div><div>代號</div><div>收盤價</div><div>漲跌幅</div><div>位階股數</div><div>上行空間評估</div></div>
+        <div class="row"><div><div class="name">SATELLOGIC INC</div><div class="muted">衛星 / 高波動題材</div></div><div class="ticker">SATL</div><div>6.81</div><div class="down">-5.94%</div><div class="rank">79.11</div><div class="space-mid">中</div></div>
+        <div class="row"><div><div class="name">LUMENTUM HOLDINGS INC</div><div class="muted">光通訊 / AI 基建</div></div><div class="ticker">LITE</div><div>846.89</div><div class="down">-3.06%</div><div class="rank">0.45</div><div class="space-high">高</div></div>
+        <div class="row"><div><div class="name">科林研發</div><div class="muted">半導體設備</div></div><div class="ticker">LRCX</div><div>258.56</div><div class="down">-2.63%</div><div class="rank">1.36</div><div class="space-high">高</div></div>
+        <div class="row"><div><div class="name">應用材料</div><div class="muted">半導體設備</div></div><div class="ticker">AMAT</div><div>403.91</div><div class="up">+0.11%</div><div class="rank">0.62</div><div class="space-high">高</div></div>
+        <div class="row"><div><div class="name">美光科技</div><div class="muted">記憶體 / AI 受惠鏈</div></div><div class="ticker">MU</div><div>481.72</div><div class="down">-1.18%</div><div class="rank">0.44</div><div class="space-mid">中</div></div>
+        <div class="row"><div><div class="name">GE VERNOVA INC</div><div class="muted">電力 / 基建</div></div><div class="ticker">GEV</div><div>1,149.53</div><div class="up">+1.95%</div><div class="rank">0.18</div><div class="space-mid">中</div></div>
+        <div class="row"><div><div class="name">輝達</div><div class="muted">AI 核心股</div></div><div class="ticker">NVDA</div><div>199.64</div><div class="down">-1.41%</div><div class="rank">1.03</div><div class="space-high">高</div></div>
+        <div class="row"><div><div class="name">科磊</div><div class="muted">半導體設備</div></div><div class="ticker">KLAC</div><div>1,815.43</div><div class="up">+0.19%</div><div class="rank">0.11</div><div class="space-mid">中</div></div>
+        <div class="row"><div><div class="name">博通</div><div class="muted">AI 核心股 / 升溫</div></div><div class="ticker">AVGO</div><div>419.94</div><div class="down">-0.64%</div><div class="rank">0.46</div><div class="space-mid">中</div></div>
       </div>
     </section>
 
